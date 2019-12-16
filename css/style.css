@@ -10,6 +10,7 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
+
 .container {
     width: 100vw;
     height: 100vh;
@@ -17,6 +18,34 @@ body {
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 7rem;
     padding: 0 2rem;
+}
+
+header {
+    width: 100%;
+    height: 50px;
+    background-color: #37cf9c;
+    position: relative;
+    display: flex;
+    color: #fff;
+    line-height: 50px;
+}
+
+header .animated {
+    margin-left: 45px;
+    opacity: 0;
+    animation: fadeInLeft 2s forwards;
+}
+
+header .logo {
+    width: 30px;
+    position: absolute;
+    margin: 0;
+    top: 10px;
+    left: 10px;
+    opacity: 0;
+    filter: invert(100%) sepia(1%) saturate(5%) hue-rotate(349deg) brightness(101%) contrast(103%);
+    animation: fadeUp 1s forwards;
+    animation-delay: 1s;
 }
 
 .img {
@@ -212,5 +241,29 @@ a:hover {
     
     .login-container {
         justify-content: center;
+    }
+}
+
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        margin-left: -70px;
+    }
+
+    100% {
+        opacity: 1;
+        margin-left: 45px;
+    }
+}
+
+@keyframes fadeUp {
+    0% {
+        opacity: 0;
+        top: -30px;
+    }
+
+    100% {
+        opacity: 1;
+        top: 10px;
     }
 }
